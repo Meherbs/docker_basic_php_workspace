@@ -1,0 +1,14 @@
+/.idea
+/.git
+/vendor
+.dockerignore
+.phpunit.result.cache
+composer.phar
+README.md
+run-tests.cmd
+Dockerfile
+Jenkinsfile
+/app/config/parameters.yml
+/var/cache
+/var/logs
+/var/sessions
