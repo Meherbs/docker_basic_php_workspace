@@ -5,7 +5,7 @@ services:
   standard_mysql:
     image: mysql
     container_name: standard_mysql
-    restart: on-failure
+    restart: always
     volumes:
       - db-data:/var/lib/mysql
     environment:
@@ -17,7 +17,7 @@ services:
   standard_phpmyadmin:
     image: phpmyadmin
     container_name: standard_phpmyadmin
-    restart: on-failure
+    restart: always
     depends_on:
       - standard_mysql
     ports:
@@ -36,7 +36,7 @@ services:
     volumes:
       - ./vhosts:/etc/apache2/sites-enabled
       - ./omniacrm:/var/www
-    restart: on-failure
+    restart: always
     networks:
       - app_web
 
